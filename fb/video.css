@@ -1,0 +1,555 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: rgb(240,242,245);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+main{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+header{
+    z-index: 99;
+    box-shadow: 1px 1px 10px rgb(215, 213, 213);
+    background-color: rgb(255,255,255);
+    height: 55px
+    
+
+}
+   
+nav{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -45px;
+    
+}
+.firstul{
+    
+
+    display: flex;
+    list-style: none;
+ 
+}
+
+
+.div2{
+    
+    display: flex;
+    justify-content: end; 
+    align-items: center; 
+    gap: 10px;
+    margin-right: 10px;  
+    margin-top: -45px;
+    
+}
+
+.left{
+   position: absolute;
+    width: 360px ;
+    height: 820px;
+    padding-top: 10px;
+    background-color: rgb(255,255,255);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: -1;
+    margin-top: px;
+  
+    
+    
+}
+.seondul{
+    list-style: none;
+    margin-top: 60px;
+  
+
+    
+}
+.lefttt{
+   
+    
+  
+}
+
+.divleft{
+    
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 340px;
+    height: 55px;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid rgb(0, 0, 147);
+    gap: 15px;
+    
+    display: flex;
+    width: 350px;
+    height: 50px;
+    align-items: center;    
+    cursor: pointer;
+    gap: 10px;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.rightside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+}
+
+.right{
+
+    width: 350px;
+    height: 350px;
+    margin-top: -370px;
+    margin-left: 1190px;
+
+}
+.rightdiv{
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    
+
+}
+.rightdiv1{
+    
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin-top: 10px;
+    
+
+}
+.rightdiv2{
+
+    display: flex;
+    margin-left: 255px;
+    margin-top: -20px; 
+    gap: 10px;
+    
+}
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -250px;
+}
+.center{
+
+    width: 600px;
+    height: 135px;
+    background-color:rgb(255,255,255) ;
+    border-radius: 8px;
+   
+}
+
+.mainul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    
+}
+.maindiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 190px ;
+    height: 40px;
+    gap: 8px;
+    margin-top:10px ;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+
+}
+.mainphoto{
+    width: 30px;
+    height: 30px;
+}
+
+
+.divseach{
+    margin-left: 65px;
+    margin-top: -45px;
+    display: flex;
+    align-items: center;
+    width: 240px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: rgb(240,242,245);
+}
+.divseach2{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 330px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: rgb(240,242,245);
+}
+.mainuserphoto{
+    width: 40px;
+    height: 40px;
+    
+}
+.mainuser{
+    display: flex;
+    margin-top: 13px;
+    margin-left: 20px;
+    align-items: center;
+    gap: 10px;
+}
+.input2{
+    width: 500px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background-color: rgb(240,242,245);
+    overflow: hidden;
+    border-radius: 90px;
+    font-size: 0.9rem;
+    padding-left: 5px;
+    
+}
+hr{
+    outline: none;
+
+    margin-top: 14px;
+    border-color: rgba(228, 230, 233, 0.212);
+}
+img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+   
+}
+#fbicon{
+    margin-left: 15px;
+    margin-top: 8px;
+    width: 40px;
+    height: 40px;
+}
+#searchicon{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+
+}
+.inpuut{
+    
+    flex:  1;
+    height: 35px;
+    border: none;
+    outline: none;
+    background-color: rgb(240,242,245);
+    overflow: hidden;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    padding-left: 5px;
+
+}
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    
+}
+#video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+   
+}
+#media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    
+    cursor: pointer;
+    transition: 0.3s;
+   
+
+}
+#groups{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    
+    transition: 0.3s;
+   
+    
+
+}
+#game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+   
+    
+}
+
+
+#menu{
+    width: 20px;
+    height: 20px;
+   
+}
+#messenger{
+    width: 20px;
+    height: 20px;
+   
+
+}
+#notification{
+    width: 20px;
+    height: 20px;
+   
+    
+
+
+}
+#user{
+    width: 35px;
+    height: 35px;
+
+
+}
+#menudiv{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228,230,235);
+    border-radius: 50%;
+    cursor: pointer;
+}
+#messengerdiv{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228,230,235);
+    border-radius: 50%;
+    cursor: pointer;
+}
+#notificationdiv{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228,230,235);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+#userdiv{
+    
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228,230,235);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.userdiv2{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(228,230,235);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.images{
+    width: 40px;
+    height: 40px;
+}
+
+
+#facelast{
+    display: flex;
+    width: 347px;
+    height: 60px;
+    align-items: center;    
+    gap: 10px;
+    box-shadow: 1px 1px 10px rgb(182, 182, 182);
+    margin-left: 8px;
+    margin-top: 10;
+    padding-left: 10px ;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    
+    
+}
+#face{
+    display: none;
+    margin-left: 1140px;
+    margin-top: -265px;
+    width: 365px;
+    height: 500px;
+    padding-top: 20px;
+    background-color: rgb(255,255,255);
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px rgb(182, 182, 182);
+   
+    
+
+    
+}
+.usernav{
+    display: flex;
+    width: 350px;
+    height: 50px;
+    align-items: center;    
+    cursor: pointer;
+    gap: 10px;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+    
+}
+.usernav2{
+
+    display: flex;
+    width: 330px;
+    height: 50px;
+    align-items: center;    
+    cursor: pointer;
+    gap: 10px;
+    
+    cursor: pointer;
+    padding-left: 10px;
+    border-radius: 8px;
+    margin-right: 25px;
+    margin-top: 10px;
+}
+.userul{
+    margin-top: 40px;
+    list-style: none;
+    
+}
+.userimg{
+    width: 23px;
+    height: 23px;
+    
+}
+.userdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(228,230,235);
+}
+.uservideo{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 290px;
+    margin-top: -35px;
+    background-color: rgb(228,230,235);
+}
+.divvideonav{
+   
+    margin-left: 10px;
+}
+
+/* hover */
+
+
+#game:hover{
+
+    background-color: rgb(242,242,242);
+    border-radius: 8px;
+}
+
+#home:hover{
+    background-color: rgb(242,242,242);
+    border-radius: 8px;
+}
+#video:hover{
+    background-color: rgb(242,242,242);
+    border-radius: 8px;
+}
+#media:hover{
+    background-color: rgb(242,242,242);
+    border-radius: 8px;
+}
+#groups:hover{
+    background-color: rgb(242,242,242);
+    border-radius: 8px;
+}
+
+.divleft:hover{
+    background-color: rgb(228,230,233)
+}
+.maindiv:hover{
+    background-color:rgb(228,230,233) ;
+}
+.usernav:hover{
+    background-color:rgb(242,242,242) ;
+}
+.usernav2:hover{
+    background-color:rgb(242,242,242) ;
+
+}
+#facelast:hover{
+    background-color:rgb(228,230,233);
+}
