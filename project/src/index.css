@@ -1,0 +1,47 @@
+.maindiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  height: 80vh;
+}
+.inputname{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px ;
+  height: 30px;
+  margin-left: 50px;
+}
+.colordiv{
+  width: 350px;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  transition: 1s;
+  cursor: pointer;
+
+
+
+}
+.colordiv:hover{
+  border-radius: 30px;
+  scale: 110%;
+
+}
+.colorinput{
+  cursor: pointer;
+  margin-top: 20px;
+}
+.inputnum{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px ;
+  height: 30px;
+  margin-left: 50px;
+
+  
+}
+
+
