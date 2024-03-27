@@ -21,6 +21,8 @@ function Counter({incrementBy,startingvalue}){
     
         </div>
     )
+
+   
 }
 
 
