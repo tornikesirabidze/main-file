@@ -19,7 +19,7 @@ const vegetable =[{id:5,name:"potatoes",calories: 98}
 
   return (
     <>
-      <List items={fruits} category="fruits" />
+      <List items={fruits} category="fruitss" />
       <List items={vegetable} category="vegetable" />
     </>
   )

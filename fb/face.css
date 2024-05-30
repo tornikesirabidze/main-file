@@ -70,6 +70,7 @@ nav{
     overflow: hidden;
     overflow: auto;
     overflow-y: scroll;
+    overflow-x: hidden;
     
 }
 
