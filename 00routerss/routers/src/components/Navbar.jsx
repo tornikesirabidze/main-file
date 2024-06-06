@@ -1,20 +1,51 @@
-import React, { act, useState } from 'react'
+import React, { act, useContext, useState } from 'react'
 import { Logo } from '../assets'
 import { navbar } from '../utils'
 import { Link } from 'react-router-dom';
 import { FaBars } from "react-icons/fa";
 import { FaX } from "react-icons/fa6";
-
+import { IdIndex } from '../App';
 
 
 function Navbar() {
-    const [active, setactive] = useState(0);
-    const [Click, SetCklick] = useState(true);
-
-    const HendleaCtive = (index) => {
-        setactive(index)
+    const [indexer, setindexer]=useContext(IdIndex)
+    const movePage=()=>{
+        if(window.location.pathname=="/"){
+            return(
+                0
+            )
+        }
+        else if(window.location.pathname=="/destination"){
+            return(
+                1
+            )
+        }
+        else if(window.location.pathname=="/crew"){
+            return(
+                2
+            )
+        }        else if(window.location.pathname=="/technology"){
+            return(
+                3
+            )
+        }
     }
-    console.log(active)
+    const [active, setactive] = useState(movePage());
+    const [Click, SetCklick] = useState(true);
+    const [Width, SetWidth]=useState("flex")
+
+    
+
+    const HendleaCtive = (index, Click) => {
+        setactive(index)
+        SetCklick(!Click)
+        
+    }
+    if(Click){
+        setTimeout(()=>{
+            SetWidth("w-0")
+        },5000)
+    }
 
     return (
         <div className='flex p-[2rem] items-center justify-between lg:pl-[3.2rem] lg:pr-0 lg:pt-[2.5rem] fixed w-full'>
@@ -26,13 +57,13 @@ function Navbar() {
             <div className='sm:flex hidden gap-[4rem]'>
                 <ul className='flex gap-[3.12rem] ml-[2rem] p-[3rem] pb-0 bg--color lg:pr-[10rem]  lg:pl-[12rem]  backdrop-blur-md  z-[3] relative border-white border-opacity-[0.01] items-center justify-end'>
                     {navbar.map((item, index) => (
-                        <Link to={item.link}>
-                            <div key={index} onClick={() => HendleaCtive(index)} className='sm:flex hidden flex-col justify-between items-end gap-[0.68rem] h-[4rem] subheading--300 cursor-pointer z-[3] text-white'>
+                        <Link to={index==1 ? "/destination/0":item.link}>
+                            <div key={index} onClick={() => setindexer(index)} className='sm:flex hidden flex-col justify-between items-end gap-[0.68rem] h-[4rem] subheading--300 cursor-pointer z-[3] text-white'>
                                 <div className='flex gap-[0.68rem]'>
                                     <span className='font-bold'>{item.num}</span>
                                     <li>{item.li}</li>
                                 </div>
-                                {active == index && <div className='bg-white w-full h-[.2rem] rounded-t-md ' />}
+                                {indexer == index && <div className='bg-white w-full h-[.2rem] rounded-t-md ' />}
                             </div>
                         </Link>
                     ))}
@@ -40,7 +71,7 @@ function Navbar() {
             </div>
             {/* mobile version */}
             <div className="sm:hidden flex fixed right-0 top-0 ">
-                <ul className={`${Click ? "translate-x-[500px]" :"translate-x-0"} flex gap-[2rem] flex-col pb-[7rem] transition-all bg--color pl-[3rem] relative lg:pl-[12rem]  backdrop-blur-md  w-[15rem] h-[100vh] z-[3] border-white border-opacity-[0.01] items-start justify-center `}>
+                <ul className={`${Click ? `translate-x-[500px] ${SetWidth}` :"translate-x-0"} flex gap-[2rem] flex-col pb-[7rem] transition-all bg--color pl-[3rem] relative lg:pl-[12rem]  backdrop-blur-md  w-[15rem] h-[100vh] z-[3] border-white border-opacity-[0.01] items-start justify-center `}>
                     {navbar.map((item, index) => (
                         <Link key={index} to={item.link}>
                             <div onClick={() => HendleaCtive(index)} className='flex flex-row w-[12rem] justify-between gap-[0.68rem] subheading--300 cursor-pointer z-[3] text-white'>

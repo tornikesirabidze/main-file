@@ -38,8 +38,10 @@
 
 
     --paragraph: 18px;
-    --paragraph--200: 18px;
+    --paragraph--200: 16px;
 }
+
+
 
 .primary-color--100 {
     color: var(--primary--100);
@@ -78,6 +80,11 @@
 }
 
 /* subheading */
+.subheading--000 {
+    font-size: var(--subheading--200);
+    line-height: 32px;
+}
+
 .subheading--100 {
     font-size: var(--subheading--100);
     letter-spacing: var(--char-space-100);
@@ -90,7 +97,7 @@
 
 .subheading--300 {
     font-size: var(--subheading--200);
-    letter-spacing: var(--char-space-100);
+    letter-spacing: var(--char-space-300);
 }
 
 .--paragraph--100 {
@@ -139,7 +146,14 @@
 
 }
 
-body {
+.dest-bg{
+    background: url("./assets/desciption/Descriptionbg.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.home-bg{
     font-family: "Barlow Condensed", sans-serif;
     background: url("./assets/hero/herobg.png") no-repeat;
     background-size: cover;
@@ -149,7 +163,7 @@ body {
 }
 
 @media (max-width: 1024px){
-    body{
+    .home-bg{
         background: url("./assets/hero/herotab.png") no-repeat;
         background-size: cover;
         background-position: center;
@@ -173,7 +187,7 @@ body {
     
 }
 @media (max-width: 520px){
-    body{
+    .home-bg{
         background: url("./assets/hero/heromob.png") no-repeat;
         background-size: cover;
         background-position: center;
