@@ -22,12 +22,15 @@
     --heading-300: 56px;
     --heading-400: 32px;
     --heading-500: 28px;
+    --heading-800: 80px;
 
 
 
     --subheading--100: 28px;
     --subheading--200: 16px;
     --subheading--300: 14px;
+    --subheading--400: 24px;
+    
 
 
 
@@ -78,12 +81,27 @@
     font-size: var(--heading-500);
     letter-spacing: var(--char-space-100);
 }
+.heading-font-800 {
+    font-size: var(--heading-800);
+}
 
 /* subheading */
 .subheading--000 {
     font-size: var(--subheading--200);
     line-height: 32px;
 }
+
+.subheading--002 {
+    font-size: var(--subheading--200);
+    line-height: 28px;
+}
+
+.subheading--003 {
+    font-size: var(--subheading--400);
+    letter-spacing: var(--char-space-100);
+}
+
+
 
 .subheading--100 {
     font-size: var(--subheading--100);
@@ -146,6 +164,15 @@
 
 }
 
+
+.crew-bg{
+    background: url("./assets/crew/Crewbg.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    
+}
+
 .dest-bg{
     background: url("./assets/desciption/Descriptionbg.png") no-repeat;
     background-position: center;
@@ -184,7 +211,24 @@
     .heading-font-100{
         line-height: 10rem;
     }
-    
+
+    .pick{
+        font-size: var(--subheading--200);
+        letter-spacing: var(--char-space-200);
+    }
+    .moon{
+        font-size: var(--heading-800);
+    }
+    .mainnav{
+        font-size: var(--subheading--300);
+        letter-spacing: var(--char-space-200);
+         
+    }
+    .desp{
+        font-size: var(--subheading--200);
+        line-height: 28px;
+        
+    }
 }
 @media (max-width: 520px){
     .home-bg{
@@ -216,5 +260,12 @@
         height:230px;
     
     }
+    
+}
+
+
+
+ 
+.anime-0{
     
 }

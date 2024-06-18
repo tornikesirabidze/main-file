@@ -49,7 +49,7 @@ export const destinationNavbar=[
         h2:"MARS",
         p:"Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!",
         distance:"225 MIL. km",
-        time:"9 MONTHS"
+        time:"9 MON"
     },
     {
         span:"EUROPA",
@@ -72,13 +72,13 @@ export const destinationNavbar=[
 export const crewText=[
     {
         img:Douglas,
-        status:"Commander",
-        name:"Douglas Hurley",
+        status:"COMMANDER",
+        name:"DOUGLAS HURLEY",
         p:"Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.",
     },
     {
         img:Mark,
-        status:"Mission Specialist ",
+        status:"MISSION SPECIALIST ",
         name:"MARK SHUTTLEWORTH",
         p:"Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.",
     },

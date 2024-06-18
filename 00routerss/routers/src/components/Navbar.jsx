@@ -48,19 +48,19 @@ function Navbar() {
     }
 
     return (
-        <div className='flex p-[2rem] items-center justify-between lg:pl-[3.2rem] lg:pr-0 lg:pt-[2.5rem] fixed w-full'>
+        <div className='flex p-[2rem] items-center justify-between lg:pl-[3.2rem] lg:pr-0 pr-[0] lg:pt-[2.5rem] pt-[0] fixed w-full'>
             <img src={Logo} alt="Website Logo" className='h-[3rem] w-[3rem]' />
             <div onClick={()=>SetCklick(!Click)} className='fixed sm:hidden flex right-6 z-[4] text-[2rem]'>
                 {Click?<FaBars className='text-white' />:<FaX className='text-white' />}
             </div>
-            <div className='h-[.1rem] w-[473px] lg:bg-white bg-transparent relative bg-[#979797] opacity-[0.6] left-[4rem] rounded-md z-[5]' />
+            <div className='h-[.1rem] w-full lg:bg-white bg-transparent relative bg-[#979797] opacity-[0.6] left-[4rem] rounded-md z-[5]' />
             <div className='sm:flex hidden gap-[4rem]'>
                 <ul className='flex gap-[3.12rem] ml-[2rem] p-[3rem] pb-0 bg--color lg:pr-[10rem]  lg:pl-[12rem]  backdrop-blur-md  z-[3] relative border-white border-opacity-[0.01] items-center justify-end'>
                     {navbar.map((item, index) => (
                         <Link to={index==1 ? "/destination/0":item.link}>
-                            <div key={index} onClick={() => setindexer(index)} className='sm:flex hidden flex-col justify-between items-end gap-[0.68rem] h-[4rem] subheading--300 cursor-pointer z-[3] text-white'>
+                            <div key={index} onClick={() => setindexer(index)} className='mainnav sm:flex hidden flex-col justify-between items-end gap-[0.68rem] h-[4rem] subheading--300 cursor-pointer z-[3] text-white'>
                                 <div className='flex gap-[0.68rem]'>
-                                    <span className='font-bold'>{item.num}</span>
+                                    <span className='font-bold lg:flex hidden'>{item.num}</span>
                                     <li>{item.li}</li>
                                 </div>
                                 {indexer == index && <div className='bg-white w-full h-[.2rem] rounded-t-md ' />}
@@ -75,8 +75,8 @@ function Navbar() {
                     {navbar.map((item, index) => (
                         <Link key={index} to={item.link}>
                             <div onClick={() => HendleaCtive(index)} className='flex flex-row w-[12rem] justify-between gap-[0.68rem] subheading--300 cursor-pointer z-[3] text-white'>
-                                <div className='flex gap-[0.68rem]'>
-                                    <span className='font-bold'>{item.num}</span>
+                                <div className='gap-[0.68rem] flex'>
+                                    <span className='font-bold '>{item.num}</span>
                                     <li>{item.li}</li>
                                 </div>
                                 {active == index && <div className='bg-white w-[0.2rem] h-[full] rounded-t-md ' />}

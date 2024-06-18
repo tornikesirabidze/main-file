@@ -4,7 +4,10 @@ import { destinationNavbar } from '../utils'
 import Desitnationpg from './Desitnationpg'
 import { Link, Outlet } from 'react-router-dom'
 
+
+
 function Destination() {
+
 
     const Moveactive=()=>{
 
@@ -29,10 +32,10 @@ function Destination() {
     const handlIndex = (i) => SetIndex(i)
 
     return (
-        <div className=' dest-bg w-full h-full flex pt-[10rem] items-center'>
+        <div className=' dest-bg w-full pr-[1rem] h-full flex pt-[10rem] lg:items-center items-start '>
             <div className='flex flex-col justify-center items-center'>
-                <div className=''>
-                    <ul className='flex justify-end items-center lg:pr-[15.5rem] --fontfamily--100 subheading--200  gap-[2.3rem]'>
+                <div className='flex flex-col justify-center lg:items-end items-center'>
+                    <ul className='lg:flex flex lg:justify-end justify-center items-center lg:pr-[15.5rem] sm:pb-0 pb-[5rem] lg:pt-0 lg:relative absolute  --fontfamily--100 subheading--200  gap-[2.3rem]'>
                         {destinationNavbar.map((item, i) => (
                             <Link to={`${i}`}>
 
