@@ -10,7 +10,7 @@ function Desitnationpg() {
 
 
     return (
-        <div className={`lg:flex-row flex flex-col w-[100vw] ${id == 1 && "pr-[90px]"} justify-between lg:px-[9rem]`}>
+        <div className={`lg:flex-row flex flex-col w-[100vw] justify-between lg:px-[9rem]`}>
             <div className='text-white flex flex-col lg:flex-col gap-10 justify-start items-center'>
                 <h1 className='pick  --fontfamily--100 subheading--100 sm:pl-[2rem] sm:w-full '><span className='font-bold primary-color--200 mr-[1.5rem]'>0{id}</span>PICK YOUR DESTINATION</h1>
                 <img src={destinationNavbar[id].img} alt="" className='lg:w-[400px] lg:h-[400px] w-[300px] h-[300px] ' />

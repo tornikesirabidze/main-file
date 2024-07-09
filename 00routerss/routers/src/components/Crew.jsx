@@ -1,68 +1,73 @@
 import React, { useState } from 'react'
 import { crewText } from '../utils'
-import "./Crew"
+import CrewBtn from './CrewBtn'
+import { Link } from 'react-router-dom'
+export const Context = React.createContext()
 
 function Crew() {
-    const [move, setMove] = useState(0)
-    const moveCrew = (pos) => {
-        if (pos == "first") {
-            setMove(0) 
-        } 
-        if(pos == "midle") {
-            setMove(-1500 ) 
-        }
-        if(pos=="second"){
-            setMove(-3000) 
-        }  
-        if(pos=="third"){
-            setMove(-4500) 
-        }
+    // const HandleCrewAct = () => {
+        
+    //     let CrewPath = window.location.pathname
+    //     if (CrewPath == "/Crew/0") {
+    //         return 0
+    //     }
+    //     if (CrewPath == "/Crew/1") {
+    //         return 1
+    //     }
+    //     if (CrewPath == "/Crew/2") {
+    //         return 2
+    //     }
+    //     if (CrewPath == "/Crew/3") {
+    //         return 3
+    //     }
+    // }
 
-    }
+    // const [crewAct, setCrewAct] = useState(HandleCrewAct)
+    const [move, setMove] = useState(0)
+    const [activeIndex, setActiveIndex] = useState(0)
 
 
 
 
     return (
 
-        <div className='overflow-hidden w-[100vw] crew-bg'>
-            <div className='flex absolute z-[99]  bottom-[8rem] gap-[1rem] left-[10rem] '>
-
-                <div onClick={() => moveCrew("first")} className='click1 cursor-pointer w-[20px] h-[20px] bg-red-600 rounded-full'></div>
-                <div onClick={() => moveCrew("midle")} className='click2  cursor-pointer w-[20px] h-[20px] bg-red-600 rounded-full'></div>
-                <div onClick={() => moveCrew("second")} className='click3  cursor-pointer w-[20px] h-[20px] bg-red-600 rounded-full'></div>
-                <div onClick={() => moveCrew("third")} className='click3  cursor-pointer w-[20px] h-[20px] bg-red-600 rounded-full'></div>
+        <Context.Provider value={[move, setMove,activeIndex, setActiveIndex]}>
 
 
-            </div>
-            <div className={`scrolmain overflow-hidden w-[6000px] ml-[5rem] h-[100vh] transition-all  flex  relative z-[5] justify-center items-center`} style={{left:`${move}px` }}>
 
-                {crewText.map((item, index) => (
-                    <div key={index} className={`anime-${index} w-full flex lg:flex-row justify-between flex-col lg:gap-[5rem] gap-[1rem] items-center `}>
-                        <div className='flex flex-col pl-[5rem] w-full items-start  '>
-                            <h1 className=' text-white w-full text-start lg:pl-0 pl-[2rem] lg:mt-[0]   --fontfamily--100 subheading--003 mt-[5rem] '><span className='font-bold primary-color--200 mr-[1rem]'>02</span>MEET YOUR CREW</h1>
-                            <div className='flex flex-col mt-[5rem]'>
-                                <h3 className='text-white --fontfamily--300 heading-font-400 primary-color--200'>{crewText[index].status}</h3>
-                                <h2 className='text-white --fontfamily--300 heading-font-300'>{crewText[index].name}</h2>
-                                <p className='text-white --fontfamily--200  --paragraph--100 primary-color--200 max-w-[444px]'>{crewText[index].p}</p>
+            <div className='overflow-hidden w-[100vw] crew-bg'>
+                <div className={`scrolmain overflow-hidden justify-between h-[100vh] transition-all  flex  relative z-[5]`} style={{ width: `${window.innerWidth * 4}px`, left: `${move}px` }}>
+                    {crewText.map((item, index) => (
+                        <div key={index} className={` w-[100vw] h-[100vh] flex lg:flex-row justify-between flex-col lg:gap-[5rem] gap-[1rem] items-center `}>
+                            <div className='flex flex-col pl-[5rem] w-full lg:items-start items-center  lg:text-start text-center  '>
+                                <h1 className=' text-white w-full text-start lg:pl-0 pl-[2rem] lg:mt-[0]   --fontfamily--100 subheading--003 mt-[12rem] '><span className='font-bold primary-color--200 mr-[1rem]'>02</span>MEET YOUR CREW</h1>
+                                <div className='flex flex-col  mt-[5rem] lg:items-start items-center'>
+                                    <h3 className='text-white --fontfamily--300 heading-font-400 primary-color--200'>{crewText[index].status}</h3>
+                                    <h2 className='text-white --fontfamily--300 heading-font-300'>{crewText[index].name}</h2>
+                                    <p className='text-white --fontfamily--200  lg:--paragraph--100 --paragraph--200 primary-color--200 lg:max-w-[444px] max-w-[525px] '>{crewText[index].p}</p>
+
+                                </div>
+                                
+                                    <div  className='sm:flex hidden lg:pt-[1rem] pt-[2rem] z-[99]'>
+                                        <CrewBtn />
+                                    </div>
+                                
                             </div>
+                            <div className=' h-[90vh] w-full flex lg:items-end lg:justify-center justify-center '>
+
+                                <img className='w-[400px]  z-[-1] absolute bottom-0' src={crewText[index].img} alt="" />
+                            </div>
+
                         </div>
-                        <div className=' h-[90vh] w-full flex lg:items-end lg:justify-center justify-center '>
-
-                            <img className=' w-[400px] z-[-1] absolute bottom-0' src={crewText[index].img} alt="" />
-                        </div>
 
 
-
-                    </div>
-
-
-                ))}
+                    ))}
 
 
 
+                </div>
             </div>
-        </div>
+        </Context.Provider>
 
     )
 }

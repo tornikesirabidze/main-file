@@ -10,21 +10,27 @@ import { IdIndex } from '../App';
 function Navbar() {
     const [indexer, setindexer]=useContext(IdIndex)
     const movePage=()=>{
+        
         if(window.location.pathname=="/"){
             return(
                 0
             )
         }
         else if(window.location.pathname=="/destination"){
+            console.log("des")
             return(
                 1
             )
         }
         else if(window.location.pathname=="/crew"){
+            
+            console.log("Crew")
             return(
                 2
             )
-        }        else if(window.location.pathname=="/technology"){
+            
+        } 
+        else if(window.location.pathname=="/technology"){
             return(
                 3
             )
@@ -48,7 +54,7 @@ function Navbar() {
     }
 
     return (
-        <div className='flex p-[2rem] items-center justify-between lg:pl-[3.2rem] lg:pr-0 pr-[0] lg:pt-[2.5rem] pt-[0] fixed w-full'>
+        <div className='flex p-[2rem] items-center z-[999] justify-between lg:pl-[3.2rem] lg:pr-0 pr-[0] lg:pt-[2.5rem] pt-[0] fixed w-full'>
             <img src={Logo} alt="Website Logo" className='h-[3rem] w-[3rem]' />
             <div onClick={()=>SetCklick(!Click)} className='fixed sm:hidden flex right-6 z-[4] text-[2rem]'>
                 {Click?<FaBars className='text-white' />:<FaX className='text-white' />}

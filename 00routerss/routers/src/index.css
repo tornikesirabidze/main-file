@@ -14,6 +14,8 @@
     --primary--100: #0B0D17;
     --primary--200: #d0d6f9;
     --primary--300: #FFFFFF;
+    --primary--400: #979797;
+    
 
 
     /* font sizes */
@@ -56,6 +58,9 @@
 
 .primary-color--300 {
     color: var(--primary--300);
+}
+.primary-color--400{
+    background-color: var(--primary--400);
 }
 
 
@@ -125,7 +130,7 @@
 
 .--paragraph--200 {
     font-size: var(--paragraph--200);
-    line-height: 16px;
+    line-height: 28px;
 }
 
 /* letter spacing */
@@ -161,6 +166,15 @@
 .button1:hover div {
     width: 450px;
     height: 450px;
+
+}
+
+
+.tech-bg{
+    background: url("./assets/technology/Techbg.png") no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 
 }
 
@@ -266,6 +280,4 @@
 
 
  
-.anime-0{
-    
-}
+ 
